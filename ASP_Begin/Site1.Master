@@ -1,0 +1,116 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="ASP_Begin.Site1" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+      <script src="Script/jquery-3.1.1.min.js"></script>
+    <link href="Content/css/bootstrap.css" rel="stylesheet" />
+    <link href="Content/css/bootstrap.css" rel="stylesheet" />
+    <script src="Script/bootstrap.min.js"></script>
+    <link href="Content/css/chosen.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+  <style>
+
+a {
+   color:#2F4F4F	
+} 
+</style>
+</head>
+<body>
+        <div class="panel panel-info">
+  <div class="panel-heading"><h2>PayRoll System</h2>
+      <h5>Al-shifa Hospital</h5>
+  </div></div>
+    <div class="container-fluid">
+        <div class="row content">
+
+            
+            <div class="col-sm-2 sidenav">
+            <%--ul class="nav nav-pills nav-stacked">
+            <li class="active"><a href="#section1">Master</a></li>
+            <li><a href="Department.aspx">Department</a></li>
+            <li><a href="#section3">Designation</a></li>
+            <li><a href="#section3">Employee</a></li>
+            </ul>--%>
+
+        <div class="panel-group" id="accordion">
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+        Master</a>
+      </h4>
+    </div>
+    <div id="collapse1" class="panel-collapse collapse in">
+     
+
+            <ul class="nav nav-pills nav-stacked">
+            <li><a href="department.aspx">Department</a></li>
+            <li><a href="Designation.aspx">Designation</a></li>
+            <li><a href="Employee.aspx">Employee</a></li>
+            </ul>
+
+    </div>
+  </div>
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+       Transaction</a>
+      </h4>
+    </div>
+
+    <div id="collapse2" class="panel-collapse collapse">
+     
+          <ul class="nav nav-pills nav-stacked">
+            <li><a href="department.aspx">Sales</a></li>
+            <li><a href="#section3">Purchase</a></li>
+            <li><a href="#section3">Estimate</a></li>
+            </ul>
+    </div>
+  </div>
+
+  <div class="panel panel-info">
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+        Reports</a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse">
+   
+           <ul class="nav nav-pills nav-stacked">
+            <li><a href="DepartmentReport.aspx">Department Report</a></li>
+            <li><a href="DesignationReport.aspx">Designation Report</a></li>
+            <li><a href="#section3">Balance Sheet</a></li>
+            </ul>
+      
+    </div>
+  </div>
+</div>
+
+
+
+
+            </div>
+            <div class="col-sm-10">
+            <form id="form1" runat="server">    
+               
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">    
+                <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>    
+            </asp:ContentPlaceHolder>   
+            </form> 
+            </div>
+        </div>
+    </div>
+
+
+
+            
+        
+    
+</body>
+</html>
